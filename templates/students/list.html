@@ -1,0 +1,23 @@
+<h1>Students</h1>
+
+<a href="{% url 'student_create' %}">
+Add Student
+</a>
+
+{% for student in students %}
+
+<p>
+
+{{ student.name }}
+
+<a href="{% url 'student_update' student.id %}">
+Edit
+</a>
+
+<a href="{% url 'student_delete' student.id %}">
+Delete
+</a>
+
+</p>
+
+{% endfor %}
